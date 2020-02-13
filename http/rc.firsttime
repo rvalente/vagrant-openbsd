@@ -1,0 +1,2 @@
+# Set Hostname Immediately
+hostname $(cat /etc/myname)
