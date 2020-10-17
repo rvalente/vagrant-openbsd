@@ -5,7 +5,7 @@
                 "A<enter><wait5>",
                 "http://{{.HTTPIP}}:{{.HTTPPort}}/install.conf<enter>"
             ],
-            "boot_wait": "20s",
+            "boot_wait": "15s",
             "disk_size": "{{user `disk`}}",
             "guest_additions_mode": "disable",
             "guest_os_type": "OpenBSD_64",
@@ -38,8 +38,9 @@
     ],
     "post-processors": [
         {
-            "name": "openbsd67",
-            "type": "vagrant"
+            "output": "openbsd67.box",
+            "type": "vagrant",
+            "vagrantfile_template": "Vagrantfile.template"
         }
     ],
     "provisioners": [
