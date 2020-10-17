@@ -1,8 +1,8 @@
 SHELL   := bash
 PACKER  := packer
 VAGRANT := vagrant
-PACKER_OUTPUT := packer_virtualbox-iso_virtualbox.box
-BOX_NAME := openbsd66
+PACKER_OUTPUT := openbsd67.box
+BOX_NAME := openbsd67
 
 .DEFAULT_GOAL := $(PACKER_OUTPUT)
 
@@ -13,7 +13,7 @@ clean :
 	$(RM) $(PACKER_OUTPUT)
 
 .PHONY : validate
-validate : 
+validate :
 	$(PACKER) validate vagrant.json
 
 $(PACKER_OUTPUT) : vagrant.json http/install.conf http/rc.firsttime scripts/bootstrap.sh
