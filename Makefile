@@ -20,4 +20,4 @@ validate:
 
 $(PACKER_OUTPUT): $(PACKERFILE) http/install.conf http/rc.firsttime scripts/bootstrap.sh
 	$(PACKER) build $(PACKERFILE)
-	$(VAGRANT) box add --name $(BOX_NAME) $(PACKER_OUTPUT)
+	$(VAGRANT) box add --name $(BOX_NAME) $(PACKER_OUTPUT) --force
