@@ -29,3 +29,8 @@ mkdir tmp && cd tmp
 vagrant init openbsd67
 vagrant up
 ```
+
+## Todo
+
+- [ ] Support Latest Snapshot
+- [ ] Additional customizations and auto install features
