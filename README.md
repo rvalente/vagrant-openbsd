@@ -14,10 +14,10 @@ brew install packer
 
 ### Building
 
-To build the vagrant box for OpenBSD run the following
+To build the vagrant box for OpenBSD 6.7 run the following:
 
 ```
-make openbsd67.box
+make
 ```
 
 This will take care of the packer build as well as adding the box to vagrant.
